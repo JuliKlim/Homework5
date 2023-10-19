@@ -38,10 +38,8 @@ class ViewController: UIViewController {
         print(sortedArray)
         //      6. Выбросить пробелы из строк в массиве
         print("6.Пробелы из строк удалены:")
-        for string in sortedArray{
-            let result6 = string.description.replacingOccurrences(of: " ", with: "")
+        let result6 = sortedArray.map{string in string.description.replacingOccurrences(of: " ", with: "")}
             print(result6)
-        }
         
     }
     

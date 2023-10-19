@@ -34,11 +34,11 @@ class ViewController: UIViewController {
         if let max = array.max(by: {$1.count > $0.count}){print(max)}
         //      5.Отсортировать массив, по возрастанию количества символов в строке
         print("5.Массив по возрастанию:")
-        let sortedArray = result2.sorted(){$0.count < $1.count}
+        let sortedArray = result2.sorted{$0.count < $1.count}
         print(sortedArray)
         //      6. Выбросить пробелы из строк в массиве
         print("6.Пробелы из строк удалены:")
-        let result6 = sortedArray.map{string in string.description.replacingOccurrences(of: " ", with: "")}
+        let result6 = sortedArray.map{string in string.replacingOccurrences(of: " ", with: "")}
             print(result6)
         
     }
